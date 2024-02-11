@@ -1,0 +1,16 @@
+{
+  "extends": "@tsconfig/ember",
+  "glint": {
+    "environment": ["ember-loose", "ember-template-imports"]
+  },
+  "compilerOptions": {
+    // Stylistic
+    "noPropertyAccessFromIndexSignature": "false",
+    // Ecosystem
+    "skipLibCheck": true,
+    // Features
+    "allowJs": true,
+    // Behavior
+    "noEmitOnError": false
+  }
+}
