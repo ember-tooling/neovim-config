@@ -3,11 +3,14 @@ import { tracked } from '@glimmer/tracking';
 
 const two = 2;
 
-class Foo extends Compnent {
+
+
+class
+Foo extends Compnent {
   <template>
     {{this.num}}
 
-    <button {{on 'click' this.increment}}
+    <button {{on 'click' this.increment}}>
       click me
     </button>
   </template>

@@ -11,6 +11,8 @@
     "@tsconfig/ember": "^3.0.3",
     "@types/rsvp": "^4.0.9",
     "ember-source": "^5.6.0",
+    "prettier": "^3.2.5",
+    "prettier-plugin-ember-template-tag": "^2.0.0",
     "typescript": "^5.3.3"
   }
 }

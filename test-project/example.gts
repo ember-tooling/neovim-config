@@ -7,7 +7,7 @@ class Foo extends Compnent {
   <template>
     {{this.num}}
 
-    <button {{on 'click' this.increment}}
+    <button {{on 'click' this.increment}}>
       click me
     </button>
   </template>
