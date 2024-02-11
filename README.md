@@ -16,6 +16,7 @@ Plugins used
 
 - Syntax highlighting: [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - File tree: [neo-tree](https://github.com/nvim-neo-tree/neo-tree.nvim)
+  Open with `:Neotree`
 
 
 ## Debugging
