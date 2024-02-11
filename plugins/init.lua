@@ -104,6 +104,47 @@ return require('packer').startup(function(use)
     }
   }
 
+  -- Comments in embedded languages via treesitter
+  -- (be able to comment in JS within Markdown, etc)
+  use { 'JoosepAlviste/nvim-ts-context-commentstring',
+    config = function()
+      require('ts_context_commentstring').setup {
+        enable_autocmd = false,
+      }
+    end
+  }
+
+  -- Better comment support.
+  -- In particular, integrating with tree-sitter's AST
+  -- for toggling block comments, and customizing
+  -- the comment blocks for Glimmer and Handlebars
+  --
+  -- See: https://github.com/alexlafroscia/tree-sitter-glimmer/issues/125
+  use { 'b3nj5m1n/kommentary', config = function()
+    local config = require('kommentary.config')
+
+    config.configure_language('default', {
+      single_line_comment_string = 'auto',
+      multi_line_comment_strings = 'auto',
+      hook_function = function()
+        require('ts_context_commentstring').update_commentstring()
+      end,
+    })
+
+    config.configure_language("typescript.glimmer", {
+      multi_line_comment_strings = { "{{!--", "--}}" },
+    })
+    config.configure_language("javascript.glimmer", {
+      multi_line_comment_strings = { "{{!--", "--}}" },
+    })
+    config.configure_language("glimmer", {
+      multi_line_comment_strings = { "{{!--", "--}}" },
+    })
+    config.configure_language("handlebars", {
+      multi_line_comment_strings = { "{{!--", "--}}" },
+    })
+  end }
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
