@@ -24,6 +24,10 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
 
+  -- Respect .editorconfig settings and apply
+  -- them to (neo)vim per-relevant buffer automatically
+  use 'editorconfig/editorconfig-vim'
+
   -- TreeSitter configures what languages you want to highlight.
   -- There are many more than what is configured here, but here,
   -- are *a* minimal set of languages used to work on web apps
@@ -88,6 +92,7 @@ return require('packer').startup(function(use)
   }
 
   -- For File browsing
+  --
   use {
     "nvim-neo-tree/neo-tree.nvim",
     branch = "v3.x",
