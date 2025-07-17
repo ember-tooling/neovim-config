@@ -112,7 +112,8 @@ local servers = {
   tsserver = {},
   ember = {},
 }
-``
+```
+
 ### 💤 LazyVim
 
 [LazyVim](https://www.lazyvim.org/).
