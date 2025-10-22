@@ -120,12 +120,10 @@ local servers = {
 
 A powerful, batteries-included Neovim distribution created by [folke](https://github.com/folke).
 
-Note: You’ll need [this PR](https://github.com/LazyVim/LazyVim/pull/6203) merged for full Ember support.
-
 To enable Ember and TypeScript support:
 - Run :LazyExtras
 - Search for lang.ember and lang.typescript
-- Enable using the <x> key
+- Enable using the `<x>` key
 
 ### 👨‍💻 User Config Examples
 
